@@ -21,10 +21,14 @@ Os dados estão no arquivo imdb.csv;
 3) Calcular a acurácia do seu classificador com testes
 
 ______________________________________________________
+```python
 from nltk.sentiment import SentimentIntensityAnalyzer
 sia = SentimentIntensityAnalyzer()
 sia.polarity_scores("Wow, NLTK is really powerful!")
+```
+```console
 {'neg': 0.0, 'neu': 0.295, 'pos': 0.705, 'compound': 0.8012}
+```
 
 4)Comparar os resultados (acurácia) do sia com os do seu classificador
 
