@@ -40,6 +40,10 @@ sia.polarity_scores("Wow, NLTK is really powerful!")
 
 Developed by: Evandro Matheus Schmitz, Leonardo Fiedler and Recigio Poffo.
 
+## Sobre os arquivos
+- `main.ipynb` contém o processamento para a geração do arquivo _bag_of_words_full.csv_, que é _bag of words_ usado para no treinamento dos classificadores. Como subproduto do processamento são gerados os arquivos _vocab_ que com tem as palavras que aparecem no _dataset_. _bag_of_words_full.csv_ com somente a contagem de palavras com frequência total maior que 1000 no dataset original.
+- `analysis_10k.ipynb` contem o treinamento dos classificadores e a comparação deles com o `SentimentIntensityAnalyzer` do pacote `nltk.sentiment`.
+
 ## Análise de Resultados com 10k dados
 
 logistic_regression
@@ -124,3 +128,12 @@ Test - Recall: 0.8012666666666668
 Test - Fscore: 0.7964063442145081  
 
 Melhores parâmetros: {'hidden_layer_sizes': 13, 'max_iter': 1000, 'solver': 'lbfgs'}
+
+## Acurácia do SIA com 30K de dados
+
+Pegando as sentenças coresposndentes as linhas do _bag of words_ usadas nos classificadores, foi feito um teste usando o `SentimentIntensityAnalyzer`. Os resultados foram:
+- Sentimentos classificados corretamente: 20746
+- Total de sentenças avaliadas: 30000
+- Acurácia: 0.6915333333333333 que dá aproximadamente 69,16%
+
+
